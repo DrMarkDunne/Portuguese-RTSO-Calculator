@@ -13,7 +13,7 @@
         </div>
         <button onclick="calculateRTSO()">Calcular</button>
         <div id="output"></div>
-        <div id="copyright" style="text-align: center; font-size: 25px; color: #d0e41d;"><a href="https://github.com/DrMarkDunne/Irish-RTSO-Calculator">© 2023 DrMarkDunne</a></div>
+        <div id="copyright" style="text-align: center; font-size: 25px; color: #d0e41d;"><a href="https://github.com/DrMarkDunne/Portuguese-RTSO-Calculator">© 2023 DrMarkDunne</a></div>
     <script>function calculateRTSO(){var a=parseFloat(document.getElementById("strike_price").value),b=parseFloat(document.getElementById("market_value").value),c=parseFloat(document.getElementById("share_count").value),d=.14,e=b*c,f=b-a,g=f*c,h=f*d,i=h*c;document.getElementById("output").innerHTML="Rendimento total das "+c+" ações vendidas: €"+e.toFixed(2)+"<br />Lucro bruto: €"+g.toFixed(2)+"<br />Total de RTSO devido sobre o lucro: €"+i.toFixed(2)+"<br /><br />Lucro líquido: €"+(g-i).toFixed(2)}</script>
 </body>
 </html>
