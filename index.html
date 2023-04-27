@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Calculadora de RTSO Portuguesa</title>
+    <style>#calculator{display:flex;flex-direction:column;align-items:center;background-image:linear-gradient(rgba(255,0,0,.4),rgba(255,0,0,.4)),url('http://clipart-library.com/new_gallery/9-99024_earn-money-png-stacks-of-money-png.png');background-repeat:no-repeat;background-position:center;background-size:cover}#inputs{display:flex;flex-direction:column}#inputs input{padding:10px;margin:10px;background-color:#006405;color:#fff;font-size:1.5rem;border-radius:10px}#output{padding:10px;margin:10px;width:600px;height:200px;border-radius:5px;background-color:#990008;color:#fff;font-size:1.2rem}button{padding:10px;margin:10px;background-color:#990008;color:#fff;font-size:1.5rem;border-radius:10px}h1{color:#bacc17;font-size:3rem;font-weight:bold}</style>
+</head>
+<body>
+    <div id="calculator">
+        <h1>Calculadora de RTSO Portuguesa</h1>
+        <div id="inputs" style="text-align: center; font-size: 45px; color: #006405;">
+            Preço de Greve: <input type="text" id="strike_price" style="background-color: #006405; color: #ffffff;" /> 
+            Valor de Mercado: <input type="text" id="market_value" style="background-color: #006405; color: #ffffff;" /> 
+            Contagem de Ações: <input type="text" id="share_count" style="background-color: #006405; color: #ffffff;" />
+        </div>
+        <button onclick="calculateRTSO()">Calcular</button>
+        <div id="output"></div>
+        <div id="copyright" style="text-align: center; font-size: 25px; color: #d0e41d;"><a href="https://github.com/DrMarkDunne/Irish-RTSO-Calculator">© 2023 DrMarkDunne</a></div>
+    <script>function calculateRTSO(){var a=parseFloat(document.getElementById("strike_price").value),b=parseFloat(document.getElementById("market_value").value),c=parseFloat(document.getElementById("share_count").value),d=.14,e=b*c,f=b-a,g=f*c,h=f*d,i=h*c;document.getElementById("output").innerHTML="Rendimento total das "+c+" ações vendidas: €"+e.toFixed(2)+"<br />Lucro bruto: €"+g.toFixed(2)+"<br />Total de RTSO devido sobre o lucro: €"+i.toFixed(2)+"<br /><br />Lucro líquido: €"+(g-i).toFixed(2)}</script>
+</body>
+</html>
